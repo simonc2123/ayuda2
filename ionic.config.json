@@ -3,5 +3,11 @@
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/IONIC/parcial2",
+      "proxyUrl": "http://localhost:8100/IONIC/parcial2"
+    }
+  ]
 }

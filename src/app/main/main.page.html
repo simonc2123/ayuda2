@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Gestion de articulos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-label>{{ item.name }}</ion-label>
+      <ion-label>{{ item.description }}</ion-label>
+      <ion-label>{{ item.price }}</ion-label>
+      <!-- Agregar botón de eliminar aquí -->
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="itemName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-input type="text" [(ngModel)]="itemDescription"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Precio</ion-label>
+    <ion-input type="number" [(ngModel)]="itemPrice"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="addItem()">Agregar</ion-button>
+</ion-content>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Enter Item ID:</ion-label>
+    <ion-input type="text" [(ngModel)]="itemId"></ion-input>
+  </ion-item>
+  
+  <ion-button expand="block" (click)="deleteItem()">Delete</ion-button>
+</ion-content>
